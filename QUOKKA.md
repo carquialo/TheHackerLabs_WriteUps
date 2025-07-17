@@ -1,5 +1,4 @@
 
-![](./images/Pasted%20image%2020241122161625.png)
 
 Creador: Oscar.
 Fecha de creación 28/10/2024
