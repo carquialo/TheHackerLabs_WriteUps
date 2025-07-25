@@ -1,8 +1,6 @@
 ESCANEO Y ENUMENRACIÓN.
 -----------------------------------------------------
 
-hola
-
 
 **Objetivo** -> Descubrir servicios abiertos y vulnerabilidades. 
 
