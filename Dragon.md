@@ -1,4 +1,6 @@
 
+![](./images/Pasted%20image%2020250822170649.png)
+
 Escaneo
 
 Primero tenemos que saber cuál es nuestra ip. 
@@ -90,4 +92,4 @@ Podemos echar un vistazo para ver ese binario para levantar una shell como root.
 
 Una vez que hayamos sido root, solo nos falta encontrar el flag. 
 
-![](./images/Pasted%20image%2020250822165352.png)
+![](./images/![](Pasted%20image%2020250822170642.png)Pasted%20image%2020250822165352.png)
