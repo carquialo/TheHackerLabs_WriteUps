@@ -1,5 +1,5 @@
 
-![](Pasted%20image%2020251213182009.png)
+![](../images/Pasted%20image%2020251213182009.png)
 
 
 Ip Víctima :
@@ -16,7 +16,7 @@ ENUMERAACIÓN
 nmap -p- --open -sS -n -Pn -vvv 10.0.2.16
 ```
 
-![](Pasted%20image%2020251213182417.png)
+![](../images/Pasted%20image%2020251213182417.png)
 
 2 puertos están funcionando en esta máquina.
 
@@ -29,16 +29,16 @@ wfuzz -c --hc=404 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.tx
 ```
 
 
-![](Pasted%20image%2020251213183055.png)
+![](../images/Pasted%20image%2020251213183055.png)
 
 Nos encontramos esto así que vamos a mirar. 
 
-![](Pasted%20image%2020251213183155.png)
+![](../images/Pasted%20image%2020251213183155.png)
 
 
 En el vemos : 
 
-![](Pasted%20image%2020251213183239.png)
+![](../images/Pasted%20image%2020251213183239.png)
 
 
 Como no tenemos contraseña ni usuario vamos y solo tenemos el ssh abierto, vamos a probar fuerza bruta. 
@@ -48,7 +48,7 @@ hydra ssh://10.0.2.16 -t 64 -l /usr/share/wordlists/seclists/Usernames/xato-net-
 ```
 
 
-![](Pasted%20image%2020251213192321.png)
+![](../images/Pasted%20image%2020251213192321.png)
 
 Nos metemos en la máquina:
 
@@ -58,14 +58,14 @@ ssh info@10.0.2.16
 
 
 
-![](Pasted%20image%2020251213192521.png)
+![](../images/Pasted%20image%2020251213192521.png)
 PRIVILEGIOS
 --------------------
 
 Para escalar privilegio vamos a https://gtfobins.github.io/ :
 
 
-![](Pasted%20image%2020251213192649.png)
+![](../images/Pasted%20image%2020251213192649.png)
 
 
 ```

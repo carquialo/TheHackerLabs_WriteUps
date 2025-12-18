@@ -1,4 +1,4 @@
-![](Pasted%20image%2020250928162924.png)
+![](../images/Pasted%20image%2020250928162924.png)
 
 Enumeración.
 ------------------------
@@ -10,7 +10,7 @@ Utilizamos nmap para escanear los puertos:
 nmap -p- --open -sS --min-rate 5000 -vvv 10.0.2.8
 ```
 
-![](Pasted%20image%2020250928164941.png)
+![](../images/Pasted%20image%2020250928164941.png)
 
 Tenemos esos dos puertos abiertos: 22 (ssh) y 80 (http).
 
@@ -22,18 +22,18 @@ Utilizaremos el siguiente comando para que nos muestre más información:
 nmap -sCV -p22,80 -v 10.0.2.8
 ```
 
-![](Pasted%20image%2020250928165427.png)
+![](../images/Pasted%20image%2020250928165427.png)
 
 Podemos ver que tenemos esas versiones. 
 
 Vamos a ver la página web. 
 
-![](Pasted%20image%2020250928165615.png)
+![](../images/Pasted%20image%2020250928165615.png)
 
 Y miramos a ver si hay algo oculto. 
 Nos encontramos con: 
 
-![](Pasted%20image%2020250928165731.png)
+![](../images/Pasted%20image%2020250928165731.png)
 
 Así que ya tenemos un usuario. 
 
@@ -50,11 +50,11 @@ He puesto ``-t 5`` para que haga 5 combinaciones en paralelo y así sea más rá
 
 Esperamos. 
 
-![](Pasted%20image%2020250928171748.png)
+![](../images/Pasted%20image%2020250928171748.png)
 
 Ya tenemos el usuario y la contraseña. Así que ahora lo que podemos hacer es conectarnos por ssh. 
 
-![](Pasted%20image%2020250928171953.png)
+![](../images/Pasted%20image%2020250928171953.png)
 
 Y ya estaríamos. 
 
@@ -71,7 +71,7 @@ Somos usuario melanie y podemos ver el user.txt.
 Pero para ser root tenemos que hacer escalada de privilegio. 
 
 
-![](Pasted%20image%2020250928172400.png)
+![](../images/Pasted%20image%2020250928172400.png)
 
 Creamos una clave SSH utilizando puttygen. que es una herramienta diseñada para gestionar claves SSH en diferentes formatos.
 
@@ -97,7 +97,7 @@ Empleamos la clave privada para acceder al servidor como usuario **root**.
 ssh -i id_rsa root@10.0.2.8
 ```
 
-![](Pasted%20image%2020250928173746.png)
+![](../images/Pasted%20image%2020250928173746.png)
 
 Y ya somos root, ahora a buscar la bandera. 
 

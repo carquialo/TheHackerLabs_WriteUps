@@ -13,11 +13,11 @@ arp-scan -I eth0 --localnet
 ```
 
 
-![](Pasted%20image%2020241122162501.png)
+![](../images/Pasted%20image%2020241122162501.png)
 
 Hacemos el scaneo para conocer la ip de la víctima y nos sale: 
 
-![](Pasted%20image%2020241122162557.png)
+![](../images/Pasted%20image%2020241122162557.png)
 
 La ip víctima es: 
 
@@ -48,19 +48,19 @@ nmap -p- -sS -sV -sC --min-rate 5000 -n -vvv -Pn 192.168.1.56
 `-Pn` ⮞ Ignora el descubrimiento de hosts mediante ping. 
 
 
-![](Pasted%20image%2020241122163043.png)
+![](../images/Pasted%20image%2020241122163043.png)
 
 
 Tenemos un servidor de IIS. 
 
 Nos vamos al puerto 80, http. 
 
-![](Pasted%20image%2020241122164044.png)
+![](../images/Pasted%20image%2020241122164044.png)
 
 Un portafolio y noticias Tech. 
 Tenemos que observar bien y podremos encontrar lo siguiente: 
 
-![](Pasted%20image%2020241122164338.png)
+![](../images/Pasted%20image%2020241122164338.png)
 
 Daniel y luis deben de hacer una revisión con privilegios. 
 
@@ -72,7 +72,7 @@ netexec smb 192.168.1.56 -u 'guest' -p ''
 
 Vemos que tenemos acceso compartidos. 
 
-![](Pasted%20image%2020241122165128.png)
+![](../images/Pasted%20image%2020241122165128.png)
 
 Vamos a listarlos. 
 
@@ -80,7 +80,7 @@ Vamos a listarlos.
 netexec smb 192.168.1.56 -u 'guest' -p '' --shares
 ```
 
-![](Pasted%20image%2020241122165212.png)
+![](../images/Pasted%20image%2020241122165212.png)
 
 Sólo podemos a acceder a compartido porque tenemos permiso de lectura y escritura. 
 
@@ -89,7 +89,7 @@ smbclient -U guest%123456 //192.168.1.56/Compartido
 ```
 
 
-![](Pasted%20image%2020241122170250.png)
+![](../images/Pasted%20image%2020241122170250.png)
 
 Ya estamos en smb.
 
@@ -99,7 +99,7 @@ En el directorio **\Compartido\Proyecto\Quokka\Código** está lo que vamos a de
 copia.bat y mantenimiento.bat
 
 
-![](Pasted%20image%2020241122170553.png)
+![](../images/Pasted%20image%2020241122170553.png)
 
 Nos los decargamos con get: 
 
@@ -113,12 +113,12 @@ Nos salimos de smb.
 Hacemos un cat a mantenimiento.bat.
 Nos sale lo siguiente: 
 
-![](Pasted%20image%2020241122170831.png)
+![](../images/Pasted%20image%2020241122170831.png)
 
 Creamos una shell ps1. 
 Buscamos en git-hub revershell ps1 y pegamos el script en nuestro archivo que hemos creado. 
 
-![](Pasted%20image%2020241122171658.png)
+![](../images/Pasted%20image%2020241122171658.png)
 
 
 Cambiamos la ip, la que es nuestra. Y le ponemos el puerto que queramos. 
@@ -132,7 +132,7 @@ python -m http.server 80
 nc -lvnp 5555
 ```
 
-![](Pasted%20image%2020241122172723.png)
+![](../images/Pasted%20image%2020241122172723.png)
 
 Tenemos la revershell en kali. 
 
@@ -140,12 +140,12 @@ Hacemos un dir.
 
 Nos vamos al directorio raíz. 
 
-![](Pasted%20image%2020241122173020.png)
+![](../images/Pasted%20image%2020241122173020.png)
 
 Nos vamos al directorio de administrator y desktop. Tenemos el flag del admisnitrador. 
 
 Y vamos a ver la flag de omar.
 
-![](Pasted%20image%2020241122173719.png)
+![](../images/Pasted%20image%2020241122173719.png)
 
 
