@@ -1,6 +1,4 @@
 
-![](../images/Pasted%20image%2020251213182009.png)
-
 
 Ip Víctima :
 
